@@ -13,7 +13,7 @@
       <h1>Mila Kovach</h1>
       <nav>
         <ul>
-          <li><a href="#">About</a> </li>
+          <li><a href="#">About</a></li>
           <li><a href="#">Experience</a></li>
           <li><a href="#">Connect</a></li>
         </ul>
@@ -23,13 +23,13 @@
     <section>   <!--This part is not a final version yet-->
       <h2>About</h2>
       <p>Hi! I am Mila, a future Front-End Software developer.</p>
-      <p>I am currently building skills and gaining an experience of creating Web/Mobile Applications.</p>
+      <p>I am currently building skills and gaining an experience in creating Web/Mobile Applications.</p>
     </section>
   
     <section>
       <h2>Experience</h2>
       <ol>
-        <li>Student of Code the Dream 2023-...</li>
+        <li>Student of Code the Dream 2023-current</li>
         <li>Stay at home parent 2014-2024</li>
         <li>Retail manager Cite Marilou, Moscow, Russia 2006-2011</li>
       </ol>
@@ -45,7 +45,25 @@
       <p><a href="mailto:vslsvn@gmail.com">Email</p>
       <p><a href="https://github.com/MilaKova">Github</a></p>
     </section>
-    
+
+    <section>
+      <h2>Leave a Message</h2>
+      <form name="leave_message">
+        <label for="usersName">Name:</label><br>
+        <input type="text" name="usersName" required="true"><br>
+        <label for="usersEmail">Email:</label><br>
+        <input type="email" name="usersEmail" required="true"><br>
+        <label for="usersMessage">Message:</label><br>
+        <textarea name="usersMessage" required="true"></textarea><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul></ul>
+    </section>
+  
     <footer></footer>
     
     <script src = "js/index.js"></script>
