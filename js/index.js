@@ -21,14 +21,14 @@ const messageSection = document.getElementById('messages');
 messageSection.hidden = true;
 messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = e.target.usersName.value;
-    const email = e.target.usersEmail.value;
-    const message = e.target.usersMessage.value;
+  const name = e.target.usersName.value;
+  const email = e.target.usersEmail.value;
+  const message = e.target.usersMessage.value;
   console.log("name:", name);
   console.log("email:", email);
   console.log("message:", message);
 
-         //----Display Messages in List
+  //----Display Messages in List
 
   const messageList = messageSection.querySelector('ul');
   const newMessage = document.createElement('li');
