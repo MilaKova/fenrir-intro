@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,19 +5,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/index.css"> 
   </head>
   
   <body>
     <header>
-      <h1>Mila Kovach</h1>
       <nav>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Connect</a></li>
-        </ul>
+        <div id="nav-menu">
+          <a class="nav-btn" href="#about"> About</a>
+          <a class="nav-btn" href="#experience"> Experience</a>
+          <a class="nav-btn" href="#skills">Skills</a>
+          <a class="nav-btn" href="#connect">Connect</a>
+        </div>
       </nav>
     </header>
+
+    <section> 
+      <h1>Mila Kovach</h1>
+    </section>
   
     <section>   <!--This part is not a final version yet-->
       <h2>About</h2>
@@ -28,11 +33,13 @@
   
     <section>
       <h2>Experience</h2>
+      <div id="experience">
       <ol>
-        <li>Student of Code the Dream 2023-current</li>
-        <li>Stay at home parent 2014-2024</li>
-        <li>Retail manager Cite Marilou, Moscow, Russia 2006-2011</li>
+        <li>Student of Code the Dream, 2023-current</li>
+        <li>Stay at home parent, 2014-2023</li>
+        <li>Retail manager Cite Marilou, 2006-2011</li>
       </ol>
+      
     </section>
     
     <section id = "skills">
@@ -42,20 +49,25 @@
     
     <section>
       <h3>Connect</h3>
-      <p><a href="mailto:vslsvn@gmail.com">Email</p>
-      <p><a href="https://github.com/MilaKova">Github</a></p>
+      <div class = "icon-links">
+        <ul>
+          <li class ="icons"><a href="mailto:vslsvn@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+          <li class ="icons"><a href="https://github.com/MilaKova"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li class ="icons"><a href="tel:650933***5"></a><ion-icon name="call-outline"></ion-icon></a></li>
+        </ul>
+      </div>
     </section>
 
     <section>
       <h2>Leave a Message</h2>
-      <form name="leave_message">
+      <form id ="leave_message" name="leave_message">
         <label for="usersName">Name:</label><br>
-        <input type="text" name="usersName" required="true"><br>
+        <input id = "name" type="text" name="usersName" required="true"><br>
         <label for="usersEmail">Email:</label><br>
-        <input type="email" name="usersEmail" required="true"><br>
+        <input id = "email" type="email" name="usersEmail" required="true"><br>
         <label for="usersMessage">Message:</label><br>
-        <textarea name="usersMessage" required="true"></textarea><br>
-        <button type="submit">Submit</button>
+        <textarea id = "message" name="usersMessage" required="true"></textarea><br>
+        <button id = "submit" type="submit">Submit</button>
       </form>
     </section>
   
@@ -67,5 +79,9 @@
     <footer></footer>
     
     <script src = "js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>   
 </html>
+
+
