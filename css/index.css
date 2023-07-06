@@ -163,8 +163,13 @@ footer {
   h1{
     text-align: center;
   }
+  section{
+    margin:20px;	  	  
+  }
+  .description{
+    width:100%;
+  }
 }
-
 /* iPads, Tablets */
 
 @media screen and (min-width: 769px)and (max-width: 1023px) {
