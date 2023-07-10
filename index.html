@@ -11,38 +11,49 @@
   
   <body>
     <header>
-      <h1>Mila Kovach</h1>
       <nav>
-        <ul>
-          <li class="nav-btn"><a href="#">About</a></li>
-          <li class="nav-btn"><a href="#">Experience</a></li>
-          <li class="nav-btn"><a href="#">Connect</a></li>
-        </ul>
+        <div id="nav-menu">
+          <a class="nav-btn" href="#about">About</a>
+          <a class="nav-btn" href="#experience">Experience</a>
+          <a class="nav-btn" href="#skills">Skills</a>
+          <a class="nav-btn" href="#connect">Connect</a>
+        </div>
       </nav>
     </header>
   
-    <section>   <!--This part is not a final version yet-->
-      <h2>About</h2>
-      <p>Hi! I am Mila, a future Front-End Software developer.</p>
-      <p>I am currently building skills and gaining an experience in creating Web/Mobile Applications.</p>
+    <section id="about"> 
+      <section class="description">
+        <h1>Hello, my name is <br>
+          <span id="myName">Mila Kovach</span>
+        </h1>
+        <p>I choose web development because I am passionate about code and enjoy the percs of remote work.</p>
+        <p> Originally from Kazakhstan, I now live in beautiful North Carolina, US</p>
+        <p>I am currently building skills and gaining an experience in creating Web/Mobile Applications, and I am excited to take on new challanges and learn new technologies.</p>
+      </section>
+      <div> 
+        <picture>
+        <img id="photo" src="images/imageMila.jpeg" alt="Mila's photo">
+        </picture>
+      </div>
     </section>
   
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
+      <div class="experience">
       <ol>
         <li>Student of Code the Dream, 2023-current</li>
-        <li>Stay at home parent, 2014-2024</li>
+        <li>Stay at home parent, 2014-2023</li>
         <li>Retail manager Cite Marilou, 2006-2011</li>
-      </ol>
+      </ol> 
     </section>
     
-    <section id = "skills">
+    <section id="skills">
       <h2>Skills</h2>
       <ul></ul>   
     </section>
-    
-    <section>
-      <h3>Connect</h3>
+   
+    <section id="connect">
+      <h2>Connect</h2>
       <div class = "icon-links">
         <ul>
           <li class ="icons"><a href="mailto:vslsvn@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
@@ -55,11 +66,11 @@
     <section>
       <h2>Leave a Message</h2>
       <form id ="leave_message" name="leave_message">
-        <label for="usersName">Name:</label><br>
+        <label for="usersName">Name:</label>
         <input id = "name" type="text" name="usersName" required="true"><br>
-        <label for="usersEmail">Email:</label><br>
+        <label for="usersEmail">Email:</label>
         <input id = "email" type="email" name="usersEmail" required="true"><br>
-        <label for="usersMessage">Message:</label><br>
+        <label for="usersMessage">Message:</label>
         <textarea id = "message" name="usersMessage" required="true"></textarea><br>
         <button id = "submit" type="submit">Submit</button>
       </form>
@@ -77,3 +88,5 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>   
 </html>
+
+
