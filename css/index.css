@@ -7,31 +7,36 @@ body {
 
 section {
   scroll-margin-top: 5rem;
-  margin:50px;
+  margin:60px;
 }
+
+/*---HEADER---*/
 
 header {  
   position: sticky;
   top: 0; 
   padding: 10px;
   background-color: rgb(45, 130, 125);  
+} 
+
+header a:hover {
+  color: #89b6e7;
 }
 
-#nav-menu{
+#nav-menu {
   display:flex;
   justify-content:space-around;
 }
-.nav-btn{
+
+.nav-btn {
   padding: 10px;
   text-transform: uppercase;
   letter-spacing: 3px;
   color:aliceblue;
   text-decoration: none;
-}
- 
-header a:hover {
-  color: #89b6e7;
-}
+} 
+
+/*---SECTION ABOUT---*/
 
 #about {
   display:flex;
@@ -39,29 +44,27 @@ header a:hover {
   flex-wrap: wrap;
   align-items:center;
   padding:0 40px;
+  background-color: rgb(248, 241, 232);
 }
 
 h1 {
-padding-bottom:20px;
-color:rgb(45, 130, 125);
-font-size: 1rem;
-}
-
-#myName {
+  color:rgb(45, 130, 125);
   font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-.description {
+.bio {
   width: 60%;
   margin:0;
 }
-#photo{
-  /* width:300px; */
+
+#photo {
   height:350px;
   border-radius: 20px;
-  box-shadow:5px 3px 6px rgb(45, 130, 125) ;
+  box-shadow:8px 6px 11px rgb(45, 130, 125) ;
 }
+
+/*--section EXPERIENCE--*/
 
 h2 {
   font-size: 1.5em; 
@@ -70,51 +73,85 @@ h2 {
   color: rgb(27, 67, 70);     
 }
 
-.experience ol{
+#experience ol{
   padding-left: 0;
   list-style: none;
   display:grid;
   grid-template-columns: 100%;
   gap:3px;
 }
-.experience li{
+#experience li{
   background-color:rgb(228, 244, 241);
   border-radius: 10px;
   padding: 10px;
   margin:5px;   
 }
 
+/*---section SKILLS--*/
+
 #skills ul {
   padding-left: 0;
 }
+
 #skills li {
   border: 2px solid rgb(144, 181, 175);
+  border-radius: 10px;
 	padding:10px 20px;
-  margin:5px;
+  margin:10px;
   display:inline-block;
   background-color:rgb(228, 244, 241);
   text-align: center;
-  text-decoration: underline;
+  box-shadow:5px 6px 9px rgb(45, 130, 125)
 }
+
+/*---section PROJECTS---*/
+
+#projects ul{
+  list-style:none;
+  padding-left: 0;
+}
+
+#projects a {
+  display:flex;
+  color:black;
+  background-color:rgb(228, 244, 241);
+  border-radius: 10px;
+  padding: 10px;
+  margin:5px;   
+}
+
+/*---section CONNECT---*/
 
 .icon-links ul {
   padding:0;
 }
 
-.icons {
+.icon-links li {
 	display:inline-block;
   border-radius: 5px ;
   background-color:rgb(228, 244, 241);
-  padding:10px 10px 5px 10px;
-  margin: 10px;
+  padding:10px 20px;
+  margin: 15px;
+  font-size: 25px;
+  box-shadow:5px 6px 9px rgb(45, 130, 125)
 }
+
+.fa-github, .fa-envelope {
+  color:black;
+}
+.fa-facebook-messenger {
+  color:blue;
+}
+
+/*---section LEAVE A MESSAGE--*/
 
 #leave_message {
   color:rgb(16, 52, 53);
   font-size: medium;
   display:flex;
   flex-direction:column;
-}  
+}
+
 #name, #email, #message {
   padding: 10px;
   width: 250px;
@@ -124,23 +161,40 @@ h2 {
   border: 2px solid rgb(45, 130, 125);
   border-radius: 8px;
 }
+
 #message {
   height:100px;
-  width:300px;
 }
+
 #submit {
   background-color: rgb(45, 130, 125);
+  border-radius: 8px;
   padding: 10px;
   color:white;
-  width:min-content;
+  width:150px;
+  margin-left: 120px;
 }
 
 #messages li {
   border: 2px solid lightblue;
   border-radius:10px;
   padding:10px;
-  display:block;
+  display:block; 
 }
+
+#messages a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#messages button {
+  margin-left: 20px;
+  border-radius: 8px;
+  background-color: rgb(88, 139, 136);
+  color:white;
+}
+
+/*---footer---*/
 
 footer {
   padding:2px ;
@@ -148,7 +202,6 @@ footer {
   font-size: 1rem;  
   text-align:center;
   color:aliceblue;  
-
 }
 
 /* Mobile devices) */
@@ -177,7 +230,9 @@ footer {
     text-align: center;
   }
   #leave_message {
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
