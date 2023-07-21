@@ -8,7 +8,7 @@ copyright.innerHTML = `Mila Kovach &#0169 ${thisYear}`
 footer.appendChild(copyright)
 
 //---Add Skills Section
-const skills = ['Java Script', 'HTML', 'SCC']
+const skills = ['Java Script', 'HTML', 'CSS', 'Git']
 const skillsSection = document.querySelector("#skills")
 
 const skillsList = skillsSection.querySelector('ul')
@@ -40,7 +40,6 @@ messageForm.addEventListener('submit', (e) => {
   const removeButton = document.createElement('button');
   removeButton.innerText = 'remove';
   removeButton.type = 'button';
-  removeButton.style.background = "lightblue"
 
   removeButton.addEventListener('click', () => {
     const entry = removeButton.parentNode;
@@ -54,4 +53,21 @@ messageForm.addEventListener('submit', (e) => {
   messageList.appendChild(newMessage);
   messageSection.hidden = false;
   messageForm.reset();
+});
+
+//----AJAX 
+let githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', "https://api.github.com/users/MilaKova/repos");
+githubRequest.send();
+
+githubRequest.addEventListener('load',function(){
+  const repositories = JSON.parse(this.response);
+  console.log("repositories:", repositories)
+  const projectSection = document.getElementById('projects');
+  const projectList = projectSection.querySelector('ul');
+    for (let i = 0; i < repositories.length; i++){
+      let project = document.createElement('li');
+      project.innerHTML = `<a href='${repositories[i].html_url}'>${repositories[i].name}</a>`;
+      projectList.appendChild(project);
+    }
 });
