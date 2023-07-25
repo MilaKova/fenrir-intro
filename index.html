@@ -26,21 +26,28 @@
       <section class="bio">
         <h1>Mila Kovach</h1>
         <p>I choose web development because I am passionate about code and </p>
-        <p> Originally from Kazakhstan, I now live in the beautiful state of North Carolina, US</p>
+        <!-- <p> Originally from Kazakhstan, I now live in the beautiful state of North Carolina, US</p> -->
         <p>I am currently building skills and gaining an experience in creating Web/Mobile Applications, and I am excited to
           take on new challanges and learn new technologies.</p>
       </section>
       <div>
         <img id="photo" src="images/imageMila.jpeg" alt="Mila's photo">
+      </div> 
+      <div class="icon-links">
+        <ul>
+          <li><a href="mailto:vslsvn@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+          <li><a href="https://github.com/MilaKova"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://www.facebook.com/mila.kovach.9"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+        </ul>
       </div>
     </section>
   
     <section id="experience">
       <h2>Experience</h2>
       <ol>
-        <li>Student of Code the Dream, 2023-current</li>
-        <li>Stay at home parent, 2014-2023</li>
-        <li>Retail manager Cite Marilou, 2006-2011</li>
+        <li><strong>Student of Code the Dream</strong>, 2023-current</li>
+        <li><cite>Stay at home parent,</cite> 2014-2023</li>
+        <li><em>Retail manager Cite Marilou, 2006-2011</em></li>
       </ol>
     </section>
 
@@ -56,24 +63,18 @@
 
     <section id="connect">
       <h2>Connect</h2>
-      <div class="icon-links">
-        <ul>
-          <li><a href="mailto:vslsvn@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
-          <li><a href="https://github.com/MilaKova"><i class="fa-brands fa-github"></i></a></li>
-          <li><a href="https://www.facebook.com/mila.kovach.9"><i class="fa-brands fa-facebook-messenger"></i></a></li>
-        </ul>
-      </div>
+     
     </section>
 
-    <section>
+    <section id ="form">
       <h2>Leave a Message</h2>
       <form id ="leave_message" name="leave_message">
-        <label for="usersName">Name:</label>
-        <input id = "name" type="text" name="usersName" required="true"><br>
-        <label for="usersEmail">Email:</label>
-        <input id = "email" type="email" name="usersEmail" required="true"><br>
-        <label for="usersMessage">Message:</label>
-        <textarea id = "message" name="usersMessage" required="true"></textarea><br>
+        <label for="usersName"><em>Name:</em></label>
+        <input id = "name" type="text" name="usersName" required="true">
+        <label for="usersEmail"><em>Email:</em></label>
+        <input id = "email" type="email" name="usersEmail" required="true">
+        <label for="usersMessage"><em>Message:</em></label>
+        <textarea id = "message" name="usersMessage" required="true"></textarea>
         <button id = "submit" type="submit">Submit</button>
       </form>
     </section>

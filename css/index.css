@@ -59,9 +59,9 @@ h1 {
 }
 
 #photo {
-  height:350px;
+  height:300px;
   border-radius: 20px;
-  box-shadow:8px 6px 11px rgb(45, 130, 125) ;
+  box-shadow:5px 6px 11px rgb(73, 168, 162);
 }
 
 /*--section EXPERIENCE--*/
@@ -84,7 +84,7 @@ h2 {
   background-color:rgb(228, 244, 241);
   border-radius: 10px;
   padding: 10px;
-  margin:5px;   
+  margin:5px;  
 }
 
 /*---section SKILLS--*/
@@ -127,53 +127,73 @@ h2 {
 }
 
 .icon-links li {
-	display:inline-block;
-  border-radius: 5px ;
-  background-color:rgb(228, 244, 241);
-  padding:10px 20px;
-  margin: 15px;
-  font-size: 25px;
-  box-shadow:5px 6px 9px rgb(45, 130, 125)
+  margin: 15px 0;
+  font-size: 20px;
+  /* box-shadow: 0 0 8px 3px rgb(140, 193, 189); */
+  list-style:none;
 }
 
-.fa-github, .fa-envelope {
-  color:black;
-}
-.fa-facebook-messenger {
-  color:blue;
+.fa-github, .fa-envelope, .fa-facebook-messenger  {
+  color:rgb(33, 102, 98);
 }
 
 /*---section LEAVE A MESSAGE--*/
 
-#leave_message {
-  color:rgb(16, 52, 53);
-  font-size: medium;
+#form{
+  background-image: url(../images/rain-drops.jpeg);
+  background-size: cover;
+    margin: 0 auto;
+    max-width: 40%;
+    padding: 5px 20px;
+    border: 1px solid rgba(140,193,190);
+    border-radius: 5px;
+    /* background: rgba(218, 248, 244, 0.5);  */
+    box-shadow: 0 0 8px 3px rgb(140, 193, 189);
+    /* box-shadow:5px 6px 9px rgb(45, 130, 125) */
+}
+
+#form h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+#leave_message label{
+  font-size: smaller;
+}
+#leave_message { 
   display:flex;
   flex-direction:column;
+  margin-bottom: 10px;
+  /* align-items: center; */
+
 }
 
 #name, #email, #message {
   padding: 10px;
-  width: 250px;
-  height: 30px;
-  color: rgb(71, 108, 102);
+  width: 200px;
+  height: 20px;
   font-size: 1rem;
-  border: 2px solid rgb(45, 130, 125);
+  border: 1px solid rgb(45, 130, 125);
   border-radius: 8px;
+
 }
 
 #message {
-  height:100px;
+  height:60px;
+  width: 250px;
 }
 
 #submit {
   background-color: rgb(45, 130, 125);
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px;
   color:white;
   width:150px;
-  margin-left: 120px;
+  margin-top: 10px;
+  /* margin-left: 120px; */
 }
+
+/*---section hidden messages--*/
 
 #messages li {
   border: 2px solid lightblue;
@@ -189,6 +209,7 @@ h2 {
 
 #messages button {
   margin-left: 20px;
+  font-size:large;
   border-radius: 8px;
   background-color: rgb(88, 139, 136);
   color:white;
@@ -197,6 +218,7 @@ h2 {
 /*---footer---*/
 
 footer {
+  margin-top: 40px;
   padding:2px ;
   background-color: rgb(45, 130, 125); 
   font-size: 1rem;  
@@ -219,8 +241,19 @@ footer {
   section{
     margin:20px;	  	  
   }
-  .description{
+  .bio {
     width:100%;
+  }
+  #form{
+   max-width: 100%;
+  }
+  #message {
+width: 250px;
+  }
+  .icon-links li{
+    display: inline-block;
+    padding:0 10px;
+
   }
 }
 /* iPads, Tablets */
@@ -229,6 +262,7 @@ footer {
   body{
     text-align: center;
   }
+ 
   #leave_message {
     display: flex;
     align-items: center;

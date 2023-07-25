@@ -38,7 +38,8 @@ messageForm.addEventListener('submit', (e) => {
   const messagesHeader = messageSection.querySelector('h2');
   newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>` + ' wrote: ' + `<span>${message}</span>`;
   const removeButton = document.createElement('button');
-  removeButton.innerText = 'remove';
+  // removeButton.innerText = 'remove';
+  removeButton.innerHTML = '<i class="fa-regular fa-trash-can"></i>'
   removeButton.type = 'button';
 
   removeButton.addEventListener('click', () => {
@@ -56,18 +57,35 @@ messageForm.addEventListener('submit', (e) => {
 });
 
 //----AJAX 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', "https://api.github.com/users/MilaKova/repos");
-githubRequest.send();
+// let githubRequest = new XMLHttpRequest();
+// githubRequest.open('GET', "https://api.github.com/users/MilaKova/repos");
+// githubRequest.send();
 
-githubRequest.addEventListener('load',function(){
-  const repositories = JSON.parse(this.response);
-  console.log("repositories:", repositories)
-  const projectSection = document.getElementById('projects');
-  const projectList = projectSection.querySelector('ul');
+// githubRequest.addEventListener('load',function(){
+//   const repositories = JSON.parse(this.response);
+//   console.log("repositories:", repositories)
+//   const projectSection = document.getElementById('projects');
+//   const projectList = projectSection.querySelector('ul');
+//     for (let i = 0; i < repositories.length; i++){
+//       let project = document.createElement('li');
+//       project.innerHTML = `<a href='${repositories[i].html_url}'>${repositories[i].name}</a>`;
+//       projectList.appendChild(project);
+//     }
+// });
+
+//---Fetch
+
+fetch("https://api.github.com/users/MilaKova/repos")
+  .then(response => response.json())
+  .then(repositories => {
+   const projectSection = document.getElementById('projects');
+   const projectList = projectSection.querySelector('ul');
     for (let i = 0; i < repositories.length; i++){
       let project = document.createElement('li');
       project.innerHTML = `<a href='${repositories[i].html_url}'>${repositories[i].name}</a>`;
       projectList.appendChild(project);
     }
-});
+  })
+  .catch(function(err) {
+    console.log('Error:', err)
+  });
