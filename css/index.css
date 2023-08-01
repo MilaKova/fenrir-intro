@@ -1,273 +1,337 @@
 body {
-  color:rgb(56, 80, 75) ;
-  font-family: Spectral,serif;
-  font-size:1.2rem;
+  color: rgb(56, 80, 75);
+  font-family: Spectral, sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+ul,
+ol {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 section {
   scroll-margin-top: 5rem;
-  margin:60px;
+  margin: 50px 80px;
+  border-top: 1px solid #87b3b0;
+}
+
+h1 {
+  margin: 15px 0;
+  font-size: 1.8em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: rgb(27, 67, 70);
 }
 
 /*---HEADER---*/
 
-header {  
+header {
   position: sticky;
-  top: 0; 
-  padding: 10px;
-  background-color: rgb(45, 130, 125);  
-} 
-
-header a:hover {
-  color: #89b6e7;
+  top: 0;
+  background-color: #156c68;
 }
 
-#nav-menu {
-  display:flex;
-  justify-content:space-around;
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.nav-btn {
-  padding: 10px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color:aliceblue;
-  text-decoration: none;
-} 
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links li a {
+  letter-spacing: 1px;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+}
+
+.nav-links li a:hover {
+  transition: 0.8s;
+  color: #ed4b4b;
+}
 
 /*---SECTION ABOUT---*/
 
 #about {
-  display:flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items:center;
-  padding:0 40px;
-  background-color: rgb(248, 241, 232);
+  display: flex;
+  border-top: none;
+  background-color: rgb(247, 244, 241);
 }
 
-h1 {
-  color:rgb(45, 130, 125);
-  font-size: 2.5em;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
 .bio {
-  width: 60%;
-  margin:0;
+  margin-left: 30px;
 }
 
 #photo {
-  height:300px;
+  margin: 30px;
+  height: 250px;
   border-radius: 20px;
-  box-shadow:5px 6px 11px rgb(73, 168, 162);
+  box-shadow: 5px 6px 11px rgb(160, 141, 123);
 }
 
 /*--section EXPERIENCE--*/
 
-h2 {
-  font-size: 1.5em; 
-  font-weight:normal;
-  font-family:'Spectral', sans-serif;
-  color: rgb(27, 67, 70);     
+#experience ol {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 8px;
 }
 
-#experience ol{
-  padding-left: 0;
-  list-style: none;
-  display:grid;
-  grid-template-columns: 100%;
-  gap:3px;
-}
-#experience li{
-  background-color:rgb(228, 244, 241);
+#experience li {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   border-radius: 10px;
-  padding: 10px;
-  margin:5px;  
+  background-color: rgb(228, 244, 241);
 }
 
 /*---section SKILLS--*/
 
 #skills ul {
-  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #skills li {
-  border: 2px solid rgb(144, 181, 175);
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid rgb(144, 181, 175);
   border-radius: 10px;
-	padding:10px 20px;
-  margin:10px;
-  display:inline-block;
-  background-color:rgb(228, 244, 241);
-  text-align: center;
-  box-shadow:5px 6px 9px rgb(45, 130, 125)
+  background-color: rgb(228, 244, 241);
+  box-shadow: 5px 6px 9px rgb(45, 130, 125);
 }
 
 /*---section PROJECTS---*/
 
-#projects ul{
-  list-style:none;
-  padding-left: 0;
-}
-
 #projects a {
-  display:flex;
-  color:black;
-  background-color:rgb(228, 244, 241);
-  border-radius: 10px;
+  display: flex;
+  margin: 5px;
   padding: 10px;
-  margin:5px;   
+  border-radius: 10px;
+  color: rgb(56, 80, 75);
+  background-color: rgb(228, 244, 241);
 }
 
-/*---section CONNECT---*/
-
-.icon-links ul {
-  padding:0;
-}
-
-.icon-links li {
-  margin: 15px 0;
-  font-size: 20px;
-  /* box-shadow: 0 0 8px 3px rgb(140, 193, 189); */
-  list-style:none;
-}
-
-.fa-github, .fa-envelope, .fa-facebook-messenger  {
-  color:rgb(33, 102, 98);
+#projects a:hover {
+  transition: 0.8s;
+  color: #ed4b4b;
 }
 
 /*---section LEAVE A MESSAGE--*/
 
-#form{
-  background-image: url(../images/rain-drops.jpeg);
+#form {
+  margin: 0 auto;
+  max-width: 40%;
+  padding: 5px 20px;
+  border: 1px solid rgba(140, 193, 190);
+  border-radius: 5px;
+  box-shadow: 0 0 8px 3px rgb(140, 193, 189);
+  background-image: url(../images/background.jpg);
   background-size: cover;
-    margin: 0 auto;
-    max-width: 40%;
-    padding: 5px 20px;
-    border: 1px solid rgba(140,193,190);
-    border-radius: 5px;
-    /* background: rgba(218, 248, 244, 0.5);  */
-    box-shadow: 0 0 8px 3px rgb(140, 193, 189);
-    /* box-shadow:5px 6px 9px rgb(45, 130, 125) */
 }
 
-#form h2{
+#form h2 {
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
-#leave_message label{
+
+#leave_message label {
   font-size: smaller;
+  color: white;
 }
-#leave_message { 
-  display:flex;
-  flex-direction:column;
+
+#leave_message {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
-  /* align-items: center; */
-
 }
 
-#name, #email, #message {
+#name,
+#email,
+#message {
   padding: 10px;
   width: 200px;
   height: 20px;
   font-size: 1rem;
-  border: 1px solid rgb(45, 130, 125);
+  border: 1px solid #156c68;
   border-radius: 8px;
-
 }
 
 #message {
-  height:60px;
+  height: 60px;
   width: 250px;
 }
 
 #submit {
-  background-color: rgb(45, 130, 125);
-  border-radius: 8px;
-  padding: 5px;
-  color:white;
-  width:150px;
   margin-top: 10px;
-  /* margin-left: 120px; */
+  padding: 5px;
+  border-radius: 8px;
+  width: 150px;
+  color: white;
+  background-color: #156c68;
+}
+
+#submit:active {
+  background-color: #000000;
 }
 
 /*---section hidden messages--*/
 
+#messages ul {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 8px;
+}
+
 #messages li {
-  border: 2px solid lightblue;
-  border-radius:10px;
-  padding:10px;
-  display:block; 
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(228, 244, 241);
 }
 
 #messages a {
   font-weight: bold;
-  text-decoration: none;
+  color: #902b2b;
+}
+
+#messages span {
+  font-weight: bolder;
+  font-size: larger;
 }
 
 #messages button {
-  margin-left: 20px;
-  font-size:large;
+  margin: 10px;
   border-radius: 8px;
-  background-color: rgb(88, 139, 136);
-  color:white;
+  color: white;
+  float: right;
+  font-size:large;
+  background-color: #156c68;
 }
+
 
 /*---footer---*/
 
 footer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
   margin-top: 40px;
-  padding:2px ;
-  background-color: rgb(45, 130, 125); 
-  font-size: 1rem;  
-  text-align:center;
-  color:aliceblue;  
+  font-size: 1rem;
+  color: white;
+  background-color: #156c68;
 }
 
-/* Mobile devices) */
+footer p {
+  padding-right: 40px;
+}
 
-@media screen and (max-width: 768px) {
+.icon-links li {
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  font-size: 20px;
+}
+
+.fa-github,
+.fa-envelope,
+.fa-facebook-messenger {
+  color: rgb(255, 255, 255);
+}
+
+/* Media queries for mobile screen */
+
+@media screen and (max-width: 767px) {
   header {
-    position:relative;
+    position: relative;
   }
-  #nav-menu {
-    flex-direction:column;
-  }
-  h1{
-    text-align: center;
-  }
-  section{
-    margin:20px;	  	  
-  }
-  .bio {
-    width:100%;
-  }
-  #form{
-   max-width: 100%;
-  }
-  #message {
-width: 250px;
-  }
-  .icon-links li{
-    display: inline-block;
-    padding:0 10px;
 
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-links {
+    align-self: end;
+  }
+
+  section {
+    margin: 10px;
+  }
+
+  #about {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+
+  #form {
+    max-width: 85%;
   }
 }
-/* iPads, Tablets */
 
-@media screen and (min-width: 769px)and (max-width: 1023px) {
-  body{
+/* Media queries  iPads, Tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1190px) {
+  section {
     text-align: center;
   }
- 
+
+  header {
+    position: relative;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bio p {
+    margin-right: 30px;
+    text-align: justify;
+  }
+
+  #skills ul {
+    justify-content: center;
+  }
+
+  #form {
+    max-width: 50%;
+  }
+
   #leave_message {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  #messages li {
+    text-align: left;
+  }
 }
-
-

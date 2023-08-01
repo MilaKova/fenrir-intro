@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Mila Kovach's Portfolio</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="css/index.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  
-  <body>
-    <header>
-      <nav>
-        <div id="nav-menu">
-          <a class="nav-btn" href="#about">About</a>
-          <a class="nav-btn" href="#experience">Experience</a>
-          <a class="nav-btn" href="#skills">Skills</a>
-          <a class="nav-btn" href="#connect">Connect</a>
-        </div>
-      </nav>
-    </header>
-  
-    <section id="about">
-      <section class="bio">
-        <h1>Mila Kovach</h1>
-        <p>I choose web development because I am passionate about code and </p>
-        <!-- <p> Originally from Kazakhstan, I now live in the beautiful state of North Carolina, US</p> -->
-        <p>I am currently building skills and gaining an experience in creating Web/Mobile Applications, and I am excited to
-          take on new challanges and learn new technologies.</p>
-      </section>
-      <div>
-        <img id="photo" src="images/imageMila.jpeg" alt="Mila's photo">
-      </div> 
-      <div class="icon-links">
+
+<head>
+  <title>Mila Kovach's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="nav-menu">
+      <h1>Mila Kovach</h1>
+      <nav class="nav-links">
         <ul>
-          <li><a href="mailto:vslsvn@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
-          <li><a href="https://github.com/MilaKova"><i class="fa-brands fa-github"></i></a></li>
-          <li><a href="https://www.facebook.com/mila.kovach.9"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#leave_message">Leave a message</a></li>
         </ul>
-      </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <nav class="bio">
+        <h2>About</h2>
+        <p>I am a hardworking and motivated person who is eager to learn and grow in a web-development career.</br>
+          Currently a student at Code the Dream, I am building skills in Javascript, HTML, CSS. And I enjoy learning and challenging myself.</p>
+        <p>As a student I recently started gaining my experience and I look forward to take new classes and get to work on
+          interesting projects ahead.</p>
+      </nav>
+      <nav>
+        <img id="photo" src="images/imageMila1.jpeg" alt="Mila's photo">
+      </nav>
     </section>
-  
+
     <section id="experience">
       <h2>Experience</h2>
       <ol>
-        <li><strong>Student of Code the Dream</strong>, 2023-current</li>
-        <li><cite>Stay at home parent,</cite> 2014-2023</li>
-        <li><em>Retail manager Cite Marilou, 2006-2011</em></li>
+        <li><strong>Student - Code the Dream</strong><em>2023 - present</em></li>
+        <li><strong>Stay at home parent - Self-employed</strong><em>2013 - 2023</em></li>
+        <li><strong>Retail manager - Cite Marilou</strong><em>2006 - 2012</em></li>
       </ol>
     </section>
 
     <section id="skills">
+      <!--inserted via JavaScript-->
       <h2>Skills</h2>
-      <ul></ul>   
+      <ul></ul>
     </section>
 
     <section id="projects">
+      <!--List of public repositories retrieved from GitHub API via Fetch
+        inserted via JavaScript)-->
       <h2> Projects</h2>
       <ul></ul>
     </section>
 
-    <section id="connect">
-      <h2>Connect</h2>
-     
-    </section>
-
-    <section id ="form">
+    <section id="form">
       <h2>Leave a Message</h2>
-      <form id ="leave_message" name="leave_message">
-        <label for="usersName"><em>Name:</em></label>
-        <input id = "name" type="text" name="usersName" required="true">
-        <label for="usersEmail"><em>Email:</em></label>
-        <input id = "email" type="email" name="usersEmail" required="true">
-        <label for="usersMessage"><em>Message:</em></label>
-        <textarea id = "message" name="usersMessage" required="true"></textarea>
-        <button id = "submit" type="submit">Submit</button>
+      <form id="leave_message" name="leave_message">
+        <label for="name"><em>Name:</em></label>
+        <input id="name" type="text" name="usersName" required="true">
+        <label for="email"><em>Email:</em></label>
+        <input id="email" type="email" name="usersEmail" required="true">
+        <label for="message"><em>Message:</em></label>
+        <textarea id="message" name="usersMessage" required="true"></textarea>
+        <button id="submit" type="submit">Submit</button>
       </form>
     </section>
-  
+
     <section id="messages">
       <h2>Messages</h2>
       <ul></ul>
     </section>
-  
-    <footer></footer>
-    
-    <script src = "js/index.js"></script>
-  </body>   
+
+  </main>
+
+  <footer>
+    <!--footer with the Copyright text with current year (inserted via JavaScript)-->
+    <ul class="icon-links">
+      <li><a href="mailto:vslsvn@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+      <li><a href="https://github.com/MilaKova"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://www.facebook.com/mila.kovach.9"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+    </ul>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
 </html>
-
-
